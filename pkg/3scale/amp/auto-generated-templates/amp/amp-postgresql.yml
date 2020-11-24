@@ -1744,7 +1744,7 @@ objects:
             - name: BACKEND_ROUTE
               valueFrom:
                 secretKeyRef:
-                  key: route_endpoint
+                  key: service_endpoint
                   name: backend-listener
             - name: SMTP_ADDRESS
               valueFrom:
@@ -2025,7 +2025,7 @@ objects:
           - name: BACKEND_ROUTE
             valueFrom:
               secretKeyRef:
-                key: route_endpoint
+                key: service_endpoint
                 name: backend-listener
           - name: SMTP_ADDRESS
             valueFrom:
@@ -2323,7 +2323,7 @@ objects:
           - name: BACKEND_ROUTE
             valueFrom:
               secretKeyRef:
-                key: route_endpoint
+                key: service_endpoint
                 name: backend-listener
           - name: SMTP_ADDRESS
             valueFrom:
@@ -2620,7 +2620,7 @@ objects:
           - name: BACKEND_ROUTE
             valueFrom:
               secretKeyRef:
-                key: route_endpoint
+                key: service_endpoint
                 name: backend-listener
           - name: SMTP_ADDRESS
             valueFrom:
@@ -2980,7 +2980,7 @@ objects:
           - name: BACKEND_ROUTE
             valueFrom:
               secretKeyRef:
-                key: route_endpoint
+                key: service_endpoint
                 name: backend-listener
           - name: SMTP_ADDRESS
             valueFrom:
