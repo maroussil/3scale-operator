@@ -1082,7 +1082,7 @@ objects:
     name: backend-listener
   stringData:
     route_endpoint: https://backend-${TENANT_NAME}.${WILDCARD_DOMAIN}
-    service_endpoint: http://backend-listener:3000
+    service_endpoint: http://backend-listener:3000/internal/
   type: Opaque
 - apiVersion: apps.openshift.io/v1
   kind: DeploymentConfig
