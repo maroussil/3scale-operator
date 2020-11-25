@@ -1082,7 +1082,7 @@ objects:
     name: backend-listener
   stringData:
     route_endpoint: https://backend-${TENANT_NAME}.${WILDCARD_DOMAIN}
-    service_endpoint: http://backend-listener:3000/internal/
+    service_endpoint: http://backend-listener:3000
   type: Opaque
 - apiVersion: apps.openshift.io/v1
   kind: DeploymentConfig
@@ -1750,10 +1750,7 @@ objects:
                   key: route_endpoint
                   name: backend-listener
             - name: BACKEND_ROUTE
-              valueFrom:
-                secretKeyRef:
-                  key: service_endpoint
-                  name: backend-listener
+              value: http://backend-listener:3000/internal/
             - name: SMTP_ADDRESS
               valueFrom:
                 secretKeyRef:
@@ -2031,10 +2028,7 @@ objects:
                 key: route_endpoint
                 name: backend-listener
           - name: BACKEND_ROUTE
-            valueFrom:
-              secretKeyRef:
-                key: service_endpoint
-                name: backend-listener
+            value: http://backend-listener:3000/internal/
           - name: SMTP_ADDRESS
             valueFrom:
               secretKeyRef:
@@ -2323,10 +2317,7 @@ objects:
                 key: route_endpoint
                 name: backend-listener
           - name: BACKEND_ROUTE
-            valueFrom:
-              secretKeyRef:
-                key: service_endpoint
-                name: backend-listener
+            value: http://backend-listener:3000/internal/
           - name: SMTP_ADDRESS
             valueFrom:
               secretKeyRef:
@@ -2614,10 +2605,7 @@ objects:
                 key: route_endpoint
                 name: backend-listener
           - name: BACKEND_ROUTE
-            valueFrom:
-              secretKeyRef:
-                key: service_endpoint
-                name: backend-listener
+            value: http://backend-listener:3000/internal/
           - name: SMTP_ADDRESS
             valueFrom:
               secretKeyRef:
@@ -2968,10 +2956,7 @@ objects:
                 key: route_endpoint
                 name: backend-listener
           - name: BACKEND_ROUTE
-            valueFrom:
-              secretKeyRef:
-                key: service_endpoint
-                name: backend-listener
+            value: http://backend-listener:3000/internal/
           - name: SMTP_ADDRESS
             valueFrom:
               secretKeyRef:
